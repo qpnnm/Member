@@ -22,13 +22,14 @@ public class Connector {
 
 	public static Connection open() {
 		try {
-			return DriverManager.getConnection(URL, ID, PWD);
+			Connection con = DriverManager.getConnection(URL, ID, PWD);
+			con.setAutoCommit(false);
+			return con;
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		return null;
 	}
-
 	public static void main(String[] args) {
 		Connection conn = open();
 		try {
