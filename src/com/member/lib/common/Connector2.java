@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Iterator;
 
 public class Connector2 {
 	private static final String URL = "jdbc:oracle:thin:@localhost:1521/xe";
