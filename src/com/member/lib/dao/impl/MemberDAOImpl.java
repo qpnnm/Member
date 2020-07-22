@@ -64,7 +64,7 @@ public class MemberDAOImpl implements MemberDAO {
 			ps.setString(3, member.get("m_pwd").toString());
 			ps.setInt(4, (int) member.get("m_num"));
 			result = ps.executeUpdate();
-			con.rollback();
+			con.commit();
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -95,7 +95,7 @@ public class MemberDAOImpl implements MemberDAO {
 			ps = con.prepareStatement(sql);
 			ps.setInt(1, mNum);
 			result = ps.executeUpdate();
-			con.rollback();
+			con.commit();
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

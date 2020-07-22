@@ -97,7 +97,7 @@ public class BookDAOImpl implements BookDAO {
 			ps = con.prepareStatement(sql);
 			ps.setInt(1, bNum);
 			result = ps.executeUpdate();
-			con.rollback();
+			con.commit();
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
