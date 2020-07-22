@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>book -view</title>
 </head>
 <body>
 	<form method="post" action="/book/update" id="frm">

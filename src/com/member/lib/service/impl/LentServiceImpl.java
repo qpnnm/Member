@@ -59,9 +59,15 @@ public class LentServiceImpl implements LentService {
 
 		return lentDAO.selectLent(lNum);
 	}
-public static void main(String[] args) {
-	LentService ls = new LentServiceImpl();
-	Map<String,Object> rMap = new HashMap<>();
-	System.out.println(ls.selectLentList(rMap));
-}
+
+	public static void main(String[] args) {
+		LentService ls = new LentServiceImpl();
+		Map<String, Object> rMap = new HashMap<>();
+		System.out.println(ls.selectLentList(rMap));
+	}
+
+	@Override
+	public List<Map<String, Object>> selectNoLentBookList() {
+		return lentDAO.selectNoLentBookList();
+	}
 }

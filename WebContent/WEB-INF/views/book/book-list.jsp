@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Book</title>
+<title>Book - list</title>
 </head>
 <body>
 	<table border="1">

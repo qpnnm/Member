@@ -1,5 +1,6 @@
 package com.member.lib.dao;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -13,4 +14,7 @@ public interface LentDAO {
 	List<Map<String, Object>> selectLentList(Map<String, Object> lent);
 
 	Map<String, Object> selectLent(int lNum);
+
+	List<Map<String, Object>> selectNoLentBookList();
+	
 }

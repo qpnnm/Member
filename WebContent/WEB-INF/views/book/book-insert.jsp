@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>book - insert</title>
 </head>
 <body>
 	<form method="post" action="/book/insert">
@@ -18,7 +18,7 @@
 				<td><input type="text" name="b_author"></td>
 			<tr>
 				<th>출판일</th>
-				<td><input type="date" name="b_credat"></td>
+				<td><input type="text" name="b_credat"></td>
 			</tr>
 			
 			<tr>
