@@ -10,7 +10,7 @@
 <title>빌려간 사람</title>
 </head>
 <body>
-<form method="post" action="/lent/lent-insert">
+<form method="post" action="/lent/insert">
    <table border="1">
       <tr>
          <th>대여자</th>

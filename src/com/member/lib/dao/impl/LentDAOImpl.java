@@ -133,8 +133,8 @@ public class LentDAOImpl implements LentDAO {
 			while (rs.next()) {
 				Map<String, Object> map = new HashMap<>();
 				map.put("l_num", rs.getInt("l_num"));
-				map.put("l_lentdat", rs.getString("l_lentdat"));
-				map.put("l_recdat", rs.getString("l_recdat"));
+				map.put("l_lentdate", rs.getString("l_lentdate"));
+				map.put("l_recdate", rs.getString("l_recdate"));
 				map.put("m_num", rs.getString("m_num"));
 				map.put("b_num", rs.getString("b_num"));
 				map.put("m_name", rs.getString("m_name"));
@@ -220,7 +220,7 @@ public class LentDAOImpl implements LentDAO {
 		ResultSet rs = null;
 		try {
 			con = Connector.open();
-			String sql = "select b_num,b_title from book where b_num not in(select b_num from lent where l_recdat is null)";
+			String sql = "select b_num,b_title from book where b_num not in(select b_num from lent where l_recdate is null)";
 			ps = con.prepareStatement(sql);
 			rs = ps.executeQuery();
 			while (rs.next()) {

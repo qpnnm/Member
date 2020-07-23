@@ -21,8 +21,8 @@
 			<tr>
 
 				<td>${lent.l_num}</td>
-				<td>${lent.l_lentdat}</td>
-				<td>${lent.l_recdat}</td>
+				<td>${lent.l_lentdate}</td>
+				<td>${lent.l_recdate}</td>
 				<td>${lent.m_name}</td>
 				<td>${lent.b_title}</td>
 			</tr>

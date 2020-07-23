@@ -29,27 +29,28 @@ public class LentServlet extends HttpServlet {
 			throws ServletException, IOException {
 		String uri = request.getRequestURI();
 		String str = "";
-		if ("/lent/lent-insert".equals(uri)) {
+		if ("/lent/insert".equals(uri)) {
 			request.setAttribute("bookList", lentService.selectNoLentBookList());
 			RequestDispatcher rd = request.getRequestDispatcher("/views/lent/lent-insert");
 			rd.forward(request, response);
 			return;
-		} else {
+		} else if ("/lent/list".equals(uri)) {
 			List<Map<String, Object>> lentList = lentService.selectLentList(null);
 			request.setAttribute("lentList", lentList);
 			RequestDispatcher rd = request.getRequestDispatcher("/views/lent/lent-list");
 			rd.forward(request, response);
+			return;
 		}
-		{
-			str = "잘못된 경로 입니다";
-		}
+
+		str = "잘못된 경로 입니다";
+
 		doProcess(response, str);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String uri = request.getRequestURI();
-		if ("/lent/lent-insert".equals(uri)) {
+		if ("/lent/insert".equals(uri)) {
 			String bNum = request.getParameter("b_num");
 			String mNum = request.getParameter("m_num");
 			Map<String, Object> lent = new HashMap<>();
