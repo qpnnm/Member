@@ -9,7 +9,7 @@
 <body>
 	<script>
 		alert("${rMap.msg}")
-		location.href = "${rMap.url}";
+		location.href = "${rMap.uri}";
 	</script>
 </body>
 </html>
